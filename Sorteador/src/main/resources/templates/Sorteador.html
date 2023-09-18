@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="icon" href="icone.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"href="css/style.css" />
+    <title>Sortear</title>
+</head>
+<body>
+
+<div style="margin-top: 10%" class="container">
+    <h1 class="text-center">Sorteador de Números</h1>
+    <form action="/" method="post">
+
+        <div class=" text-center">
+            Sortear
+            <input class="text-center" type="number" name="quantity" id="quantity" min="1">
+
+            Numero
+            <div class="mt-2">
+                Entre
+                <input class="text-center" type="number" name="begin" id="begin" min="1" max="999999999">
+                e
+                <input type="number" class="text-center" name="end" id="end" min="1" max="999999999">
+
+            </div>
+
+        </div>
+        <div class=" text-center">
+            <input value="Sortear Agora" type="submit" class="m-2 btn btn-primary" id="btnSorteador">
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="false" aria-controls="collapseOne">
+                  <span class="grow text-center pl-6">Opções do Sorteio</span>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show text-start"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div
+                    class="p-3 cursor-pointer border-b text-left text-sm bg-white dark:bg-gray-600 dark:text-white dark:border-gray-800">
+                    <input type="checkbox" name="ordemIncrease" id="ordemIncrease"
+                      class="bg-white w-4 h-4 text-blue-600 bg-gray-100 mx-2 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-0 dark:bg-gray-700 dark:border-gray-600" />
+                    <label class="ml-2 cursor-pointer no-select">Ordenar resultados em ordem crescente</label>
+                  </div>
+                  <div
+                    class="p-3 cursor-pointer border-b text-left text-sm bg-white dark:bg-gray-600 dark:text-white dark:border-gray-800">
+                    <input type="checkbox" name="repetition" id="repetition"
+                      class="bg-white w-4 h-4 text-blue-600 bg-gray-100 mx-2 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-0 dark:bg-gray-700 dark:border-gray-600" />
+                    <label class="ml-2 cursor-pointer no-select">Permitir repetição de números</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </form>
+
+    <!-- tabelas-->
+
+
+</div>
+
+
+</body>
+</html>
